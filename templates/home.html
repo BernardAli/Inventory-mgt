@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block content %}
+
+        <ul class="navbar-nav">
+            {% if request.user.is_authenticated %}
+            <li><a href="/accounts/logout"><button class="btn btn-danger">{{ user }} | Logout</button></a></li>
+            {% else %}
+            <li><a href="/accounts/login">Login</a></li>
+            {% endif %}
+        </ul>
+
+{% endblock %}
